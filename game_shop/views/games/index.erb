@@ -1,0 +1,17 @@
+<h2>Games</h2>
+
+<ul class="games">
+  <% @games.each do |game| %>
+  <li>
+    <strong>
+      <a href="/games/<%= game.id %"><%= game.to_s %></a>
+    </strong>
+
+    <a href="#">Delete Game</a>
+    </li>
+    <% end %>
+</ul>
+
+<hr/>
+
+<a class="btn"  href="/songs/new">Add Game</a>
