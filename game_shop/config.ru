@@ -2,8 +2,11 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
-require '.models/games'
+# Models
+require './models/game'
 
-requier './app'
+# Controllers
+require './app'
 
 use Rack::MethodOverride
+run GamesApp

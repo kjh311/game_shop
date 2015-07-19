@@ -1,17 +1,20 @@
-<h2>Games</h2>
+ <h2>Games</h2>
+
 
 <ul class="games">
   <% @games.each do |game| %>
-  <li>
-    <strong>
-      <a href="/games/<%= game.id %"><%= game.to_s %></a>
-    </strong>
+    <li>
+      <strong>
+        <a href="/games/<%= game.id %>"><%= game.to_s %></a>
+      </strong>
 
-    <a href="#">Delete Game</a>
+
+      <a href="#">Delete Game</a>
     </li>
-    <% end %>
+  <% end %>
 </ul>
 
 <hr/>
 
-<a class="btn"  href="/songs/new">Add Game</a>
+<a class="btn" href="/games/new">Add Game</a>
+

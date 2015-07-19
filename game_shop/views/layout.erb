@@ -1,27 +1,29 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Retro Game Shop</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/css/games.css">
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
+    <!-- <nav>
+      <ol>
+        <li><a href="/">Retro Games</a></li>
         <li><a href="/games">Games</a></li>
-        <li><a href="/games/new">Add a Game</a></li>
-      </ul>
-    </nav>
-    <main>
-      <%= yield %>
-    </main>
-    <footer>
-      &copy; Retro Game Shop
-    </footer>
-
+        <li><a href="/games/new">Add A Game</a></li>
+      </ol>
+    </nav> -->
+        <p><a href="/">Retro Games</a></p>
+        <p><a href="/games">Games</a></p>
+        <p><a href="/games/new">Add A Game</a></p>
   </header>
-
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+    &copy; Retro Games Shop
+  </footer>
 </body>
 </html>
