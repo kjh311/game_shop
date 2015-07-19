@@ -1,0 +1,16 @@
+<h2 style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8)">Edit Game</h2>
+
+<form class="game" id="edit-game" method="POST" action="/games/<%= @game.id %>">
+  <input style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8); margin:5px;" type="hidden" name="_method" value="PUT">
+  <div style="margin-top:10px;">
+    <label style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8); margin:5px;" for="game-title">Title:</label>
+    <input style="font-family: 'Press Start 2P', serif; color:black; font-size:25px; margin:5px; background-color: rgba(255,255,255, 0.8); padding:10px; border-radius:10px;" type='text' name='game[title]' id="game-title" value="<%= @game.title %>">
+  </div>
+  <div style="margin-top:10px;">
+    <label style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8); margin:5px;" for="game-published-in">Year Published:</label>
+    <input style="font-family: 'Press Start 2P', serif; color:black; font-size:25px; background-color: rgba(255,255,255, 0.8); padding:10px; border-radius:10px;" type='text' name='game[platform]' id="game-platform" value="<%= @game.platform %>">
+  </div>
+  <div style="margin-top:10px;">
+    <input style="color:black; font-size: 35px; padding: 5px; margin: 10px; font-family: 'Press Start 2P', serif; margin:5px;" type="submit" value="Save Game" class='btn'>
+  </div>
+</form>

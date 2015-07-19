@@ -1,20 +1,24 @@
- <h2>Games</h2>
+ <h2 style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8)">Games</h2>
 
 
 <ul class="games">
   <% @games.each do |game| %>
-    <li>
+    <li style="margin-top:10px;">
       <strong>
-        <a href="/games/<%= game.id %>"><%= game.to_s %></a>
+        <a style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8)" href="/games/<%= game.id %>"><%= game.to_s %></a>
       </strong>
 
+       <a style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8); padding: 5px; margin: 15px;" href="/games/<%= game.id %>/edit">
+        Edit
+      </a>
 
-      <a href="#">Delete Game</a>
+
+      <a style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8); padding: 5px; margin: 15px;" href="#">Delete Game</a>
     </li>
   <% end %>
 </ul>
 
 <hr/>
 
-<a class="btn" href="/games/new">Add Game</a>
+<a style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8)" class="btn" href="/games/new">Add Game</a>
 

@@ -5,6 +5,11 @@ class GamesApp < Sinatra::Base
     redirect('/games')
   end
 
+  # about page
+  get "/about" do
+    erb(:about)
+  end
+
  # index
   get '/games' do
     @games = Game.all
@@ -33,6 +38,12 @@ class GamesApp < Sinatra::Base
     erb(:"games/show")
   end
 
+   # edit
+  get '/games/:id/edit' do
+    @game = Game.find(params[:id])
+    erb(:"games/edit")
+  end
+
    # update
   put '/games/:id' do
     @game = Game.find(params[:id])
@@ -52,5 +63,15 @@ class GamesApp < Sinatra::Base
       redirect("/games/#{@game.id}")
     end
   end
+
+  #  # destroy
+  # delete "/widgets/:id" do
+  #   @widget = Widget.find params[:id]
+  #   if @widget.destroy
+  #     redirect "/widgets"
+  #   else
+  #     redirect "/widgets/#{@widget.id}"
+  #   end
+  # end
 
 end
