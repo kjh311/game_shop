@@ -1,5 +1,8 @@
 <h2 style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8)">Edit Game</h2>
-
+<br />
+<br />
+<br />
+<br />
 <form class="game" id="edit-game" method="POST" action="/games/<%= @game.id %>">
   <input style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.5); margin:5px;" type="hidden" name="_method" value="PUT">
   <div style="margin-top:10px;">
@@ -7,7 +10,7 @@
     <input style="font-family: 'Press Start 2P', serif; color:black; font-size:25px; margin:5px; background-color: rgba(255,255,255, 0.5); padding:10px; border-radius:10px;" type='text' name='game[title]' id="game-title" value="<%= @game.title %>">
   </div>
   <div style="margin-top:10px;">
-    <label style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8); margin:5px;" for="game-published-in">Platform:</label>
+    <label style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8); margin:5px;" for="game-platform">Platform:</label>
     <input style="font-family: 'Press Start 2P', serif; color:black; font-size:25px; background-color: rgba(255,255,255, 0.5); padding:10px; border-radius:10px;" type='text' name='game[platform]' id="game-platform" value="<%= @game.platform %>">
   </div>
   <div style="margin-top:10px;">
