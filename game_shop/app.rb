@@ -2,7 +2,7 @@ class GamesApp < Sinatra::Base
 
 # root
   get "/" do
-    redirect('/games')
+    redirect('/about')
   end
 
   # about page
