@@ -11,13 +11,24 @@
         <a style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8)" href="/games/<%= game.id %>"><%= game.to_s %></a>
       </strong>
 
-       <a style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8); padding: 5px; margin: 15px;" href="/games/<%= game.id %>/edit">
+       <!-- <a style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8); padding: 5px; margin: 15px;" href="/games/<%= game.id %>/edit">
         Edit
-      </a>
+      </a> -->
+
+       <!-- <form  method="PUT" action="/games/<%= game.id %>">
+      <input type="hidden" name="_method" value="GET"> -->
+          <!-- <a href="/games/<%= game.id %>/edit">Edit<button name="edit-game">Edit Game</button></a> -->
+          <a style="display: inline; font-size: 20px;" href="/games/<%= game.id %>/edit"><button name="delete-game">Edit</button></a>
+        <!-- </form> -->
 
 
-      <a style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8); padding: 5px; margin: 15px;" href="#">Delete Game</a>
-    </li>
+      <form style="display: inline;" method="POST" action="/games/<%= game.id %>">
+      <input type="hidden" name="_method" value="DELETE">
+          <a href="/games/<%= game.id %>/delete"><button name="delete-game">Delete Game</button></a>
+        </form>
+
+      <!-- <a style="font-family: 'Press Start 2P', serif; color:rgba(255,255,255, 0.8); padding: 5px; margin: 15px;" href="#">Delete Game</a>
+    </li> -->
   <% end %>
 </ul>
 
